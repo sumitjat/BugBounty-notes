@@ -7,3 +7,8 @@ Nothing fancy just some bug bounty notes or simplified version of some writeup w
 
 ```
 I am not good at organizing things as you can see so if you wanna edit some part mostly welcomed 
+
+```
+
+> If source is not there ping me
+> ignore my poor english 
