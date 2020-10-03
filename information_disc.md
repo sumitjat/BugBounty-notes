@@ -305,6 +305,52 @@ Perform a search on Bing: site: ███ AND "https://████████�
 OR navigate to the provided links:
 Detailed resume: https://███████Portals/22/Documents/Meetings/m14/█████.pdf
 
+---
+
+## 21 10K$ in [10h](https://medium.com/@tensecure/how-our-co-founder-earned-10-6k-in-just-10-hours-ea323e2f06b1)
+
+one of the best I have ever seen 
+
+redact.com was crypto website
+
+He visited to censys and search and found AWS IP one of them pointing to redactdev.com .
+
+found an open Nexus repository on repo.redactdev.com with default creds 
+
+
+an open ‘.env’ file on one of the sub-domains gained my attention, which had an IP of a Linode server as 172.x.x.x. I quickly went ahead to scan for it’s open ports through Nmap and found SSH, HTTP & HTTPS ports to be open. He did fuzz and phpmyadmin and creds 
+
+Tried same credentials for connecting SSH and it worked too
+
+after exploring data in phpmyadmin he found  it had several emails ending with @domain.is.my after google he found it is running development website 
+
+did fuzz in x.domain.is.my found .env file tried to connect SSH on x.domain.is.my with the credential and it worked like a charm
+
+ went for /var/www/ directory copied the names of all the files and directory in it, to create a custom wordlist
+
+irsearch on https://x.domain.is.my with the custom wordlist and this time ‘/oauth/gittest.sh’ was found which contain username and password. Quickly, I tried these credentials on github.com/company_name
+
+had access to their Github also
+
+deep dive into the x.domain.is.my and found SMPT configuration file, which contains the credentials,
+
+able to send email to anyone from noreply@redact.com email
+
+hecked for any running services on the server and found that the MySQL was running, tried connecting with the same credentials which was used for SSH and it worked too.
+
+found an admin portal as admin.redact.com. I tried to login into admin portal with developer credentials and I was successful authenticated but there was 2FA. The 2FA mechanism was fairly easy to bypass by simply doing response manipulation
+
+
+---
+
+## 22  Coupon to info discl
+
+- GET request with email param to get coupon offer
+- bruteforce email 
+- if email valid it disclosed the coupon code and phone no
+
+---
+
 
 
 
