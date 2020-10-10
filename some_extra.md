@@ -225,5 +225,118 @@ Too many redirect
 
 example.com/*/ or anything ask me for source 
 
+---
+
+https://www.youtube.com/watch?v=yV7O-QRyOao
+
+read only user cannot edit the email but when he change username he can add useremail by himself which can change the email --> it is client side validation bypass
+
+
+---
+
+Bypassing Nickname [Feature](https://kntx.xyz/Bypassing-Nickname-Feature/)
+
+Create/signup an account here: redacted.com
+Assuming the we have already created an account, now go to redacted.com and edit your details.
+Intercept the request and append this parameter called Nickname
+
+```
+{“name”:{“given”:”redacted”,”family”:”redacted”},”location”:”redacted”,”bio”:”redacted”,”phone_number”:”redacted”}
+```
+
+```
+{“name:{“given”:”redacted”,”family”:”redacted”},”Nickname”:”BypassedNickname”,”location”:”redacted”,”bio”:”redacted”,”phone_number”:”redacted”}
+```
+
+---
+
+Apache [Example](https://medium.com/bugbountywriteup/apache-example-servlet-leads-to-61a2720cac20)
+
+He found one example in which it is showing cookie value  with whixh he connect to clickjacking which lead to send cookie to collab link 
+
+---
+
+Banner Grabbing to DoS and memory corruption 
+
+Link :- https://medium.com/bugbountywriteup/banner-grabbing-to-dos-and-memory-corruption-2442b1c25bbb
+
+
+> nmap -Pn -p 80, 443 -sV — script=banner -iL all_subdomains.txt
+
+or 
+
+> curl -s -I 192.168.0.100 | grep -e “Server: “
+
+He found exploit which  can be triggered by specifying the Range header in an HTTP request. A 
+vulnerable install will respond with an HTTP 416 Requested Range Not Satisfiable error.
+ had just to specify the valid file and the byte range of 100 and as a result it lead me to a blue screen
+
+found metasaploit module executed it and found memory dumb 
+
+
+---
+
+PHPINFO to SMTP server 
+
+https://medium.com/bugbountywriteup/from-security-misconfiguration-to-gaining-access-of-smtp-server-ed833e757e6e
+
+phpinfo function was active on that subdomain
+
+> decided to test their SMTP server settings.
+
+config it and we can send mail to anyone with company mail
+
+---
+
+ INR TO USD 
+
+ https://medium.com/@suneets1ngh/parameter-tampering-ddd9b3de0da8
+
+ He Changed INR to USD which will change price from inr to usd and website is converting to equivalent usd price but when we are in checkout the price will be inr but less as it was converted in USD.
+
+---
+
+Weird Facebook vuln
+
+https://medium.com/@amineaboud/story-of-a-weird-vulnerability-i-found-on-facebook-fc0875eb5125
+
+By googling he found one endpoint  https://legal.tapprd.thefacebook.com/tapprd/auth/identity/logout
+
+which is 200 and functioning for logout he tried to access inner directories but they showed error 403 
+
+![a](https://miro.medium.com/max/875/1*hXEaz_kYEDcVL50RszCErw.png)
+
+<br>
+
+ http:// legal.tapprd.thefacebook.com/tapprd/
+
+Number of threats: 6
+Numbers of retries on network failure: 4
+Pause before retry (milliseconds): 3000
+
+> By sending multiple simultaneous HTTP requests to /tapprd/,
+
+ some requests managed to bypass the 403 permission denied error and got a full directory listing. 🤩
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  
