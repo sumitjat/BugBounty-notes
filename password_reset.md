@@ -127,6 +127,9 @@ X-Forwarded-Host: localhost
 
 ---
 
-s
+11 > Password reset poisoning with Referrer header
 
+https://medium.com/bugbountywriteup/fun-with-header-and-forget-password-without-that-nasty-twist-cbf45e5cc8db
+
+---
 
