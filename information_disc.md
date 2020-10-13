@@ -13,6 +13,13 @@ dboperation.svc
 
 403 on /upload_panel
 Bypassed by /upload_panel?stats=1
+
+Whenever you are checking for endpoints, make sure to check an API endpoint called "internal_api". It looks like this:-
+site.com/internal_api/1/accounts/accnumber/ 
+
+You can get the other user's account events, messages etc if you are able to manipulate it :)
+
+
 <br>
 ----
 some good writeup for recon
@@ -350,6 +357,9 @@ found an admin portal as admin.redact.com. I tried to login into admin portal wi
 - if email valid it disclosed the coupon code and phone no
 
 ---
+
+
+ 
 
 
 
